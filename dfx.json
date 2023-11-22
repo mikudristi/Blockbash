@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Blockbash_backend": {
+      "main": "src/Blockbash_backend/main.mo",
+      "type": "motoko"
+    },
+    "Blockbash_frontend": {
+      "dependencies": [
+        "Blockbash_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Blockbash_frontend/src/index.html"
+      },
+      "source": [
+        "src/Blockbash_frontend/assets",
+        "dist/Blockbash_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
